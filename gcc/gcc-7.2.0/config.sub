@@ -262,6 +262,7 @@ case $basic_machine in
 	| e2k | epiphany \
 	| f1kore \
 	| fido | fr30 | frv | ft32 \
+	| fusion \
 	| h8300 | h8500 | hppa | hppa1.[01] | hppa2.0 | hppa2.0[nw] | hppa64 \
 	| hexagon \
 	| i370 | i860 | i960 | ia64 \
@@ -387,6 +388,7 @@ case $basic_machine in
 	| e2k-* | elxsi-* \
 	| f1kore-* \
 	| f30[01]-* | f700-* | fido-* | fr30-* | frv-* | fx80-* \
+	| fusion-*
 	| h8300-* | h8500-* \
 	| hppa-* | hppa1.[01]-* | hppa2.0-* | hppa2.0[nw]-* | hppa64-* \
 	| hexagon-* \
@@ -669,6 +671,10 @@ case $basic_machine in
 	es1800 | OSE68k | ose68k | ose | OSE)
 		basic_machine=m68k-ericsson
 		os=-ose
+		;;
+	fusion | fusion-*)
+		basic_machine=fusion-unknown
+		os=-elf
 		;;
 	fx2800)
 		basic_machine=i860-alliant
